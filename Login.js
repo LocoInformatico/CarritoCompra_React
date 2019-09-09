@@ -1,27 +1,36 @@
 import React, { Component } from 'react'
+import './css/login.css';
 
 class Login extends Component {
-    constructor(){
-        super()
-        this.state = {
-            username: '',
-            password: ''
-        }
-    }
-
     render() {
         return(
-            <div className="card">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <h1 className="display-1">Inicio Sesión</h1>
-                        <label name="username">Correo Electrónico: </label>
-                        <input type="text" name="username" id="username" className='form-control'/>
-                        <label name="password">Contraseña: </label>
-                        <input type="text" name="password" id="password" className='form-control'/>
+            <div className='container m-auto'>
+                <div className='row contenedor'>
+                    <div className='col-4'></div>
+                    <div className='col-md-4 my-auto text-white'>
+                        <h1 className="text-center">Inicio Sesión</h1>
+                        <form>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputEmail1">Correo Electronico</label>
+                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su Correo"></input>
+                                <small id="emailHelp" className="form-text">
+                                    Nunca compartiremos su correo electrónico con nadie más.
+                                </small>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputPassword1">Password</label>
+                                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
+                            </div>
+                            <button type="submit" className="btn btn-primary">
+                                Enviar
+                            </button>
+                        </form>
                     </div>
+                    <div className='col-4'></div>
                 </div>
             </div>
         )
     }
 }
+
+export default Login

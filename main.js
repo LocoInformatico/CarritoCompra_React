@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import { render } from 'react-dom'
 
 //Componentes
 import Login from './Login'
 
-ReactDOM.render(<Login/>, document.getElementById('app') )
+render(<Login/>, document.getElementById('app') )
